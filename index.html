@@ -3,13 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NilMar Enterprises adivinhação</title>
+  <title>Jogo de adivinhação</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Jogo de adivinhação</h1>
-  <p>Escolha um número entre 1 a 10</p>
-  <button for="buttonclass">Jogar</button>
-  <input type="text" id="numero" name="numero">
+  <div class="titulo"> <h1>Jogo de adivinhação</h1> </div>
+<!-- Criando o sobre o jogo -->
+  <div class="sobre_jogo">
+  <h2>Sobre o jogo</h2>
+  <p>Neste jogo, você terá a oportunidade de escolher o nível de dificuldade, o que alterará o intervalo de números válidos, além do número de tentativas disponíveis. Divirta-se e mostre o quão habilidoso você pode ser! </p>
+</div>
+<!-- Criando as dificuldades -->
+<div class="dificuldade">
+  <!-- Modo facil -->
+  <div class="modo-facil">
+  <h1>Modo fácil 👶🏻</h1>
+  <p>O número está entre 1 e 20</p>
+  <p>O usuário terá 6 chances </p>
+  <p>Será dito se o numero escolhido e mais baixo ou alto do que o sorteado</p>
+  </div>
+<!-- Modo medio -->
+  <div class="modo-medio">
+    <h1>Modo médio 🙄</h1>
+    <p>O número está entre 1 e 50</p>
+    <p>O usuário terá 6 chances </p>
+    <p>Será dito se o numero escolhido e mais baixo ou alto do que o sorteado</p>
+  </div>
+<!-- modo dificil -->
+  <div class="modo-dificil">
+    <h1>Modo dificil 😡 </h1>
+    <p>O número está entre 1 e 200</p>
+    <p>O usuário terá 5 chances </p>
+    <p>Será dito se o numero escolhido e mais baixo ou alto do que o sorteado</p>
+  </div>
+</div>
+<!-- Criando o escolha a dificuldade -->
+<div class="escolha-dificuldade">
+  <h2>Escolha a dificuldade</h2>
+<select id="opcoes-dificuldade">
+  <option value="1"> Fácil</option>
+  <option value="2"> Média</option>
+  <option value="3"> Difícil</option>
+</select>
+<button onclick="confirmar_dificuldade()">Confirmar</button>
+</div>
+ <!-- Criando o Escolha um número -->
+<div class="jogo">
+<h2>Você escolheu a dificuldade ...</h2>
+<p>O número está entre 1 e ...</p>
+<label for="numero">Escolha o número</label>
+<input type="number" id="numero" name="numero" min="1" max="200">
+<button onclick="confirmar_numero()">Confirmar</button>
+</div>
 </body>
 </html>
