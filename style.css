@@ -1,5 +1,42 @@
-h1 {
-  color: rgb(0, 0, 0);
-  font-size: xx-large;
+/*  muda cor do fundo */
+body {
+  background-color: rgb(141, 138, 138); 
 }
+
+/*alinha o titulo no centro */
+.titulo {
+  text-align: center;
+  font-family: Arial;
+}
+
+/*alinha o sobre o jogo no centro */
+.sobre_jogo {
+  width: 450px; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* alinha os niveis de dificuldade na horizontal e de forma uniforme */
+.dificuldade {
+display: flex;
+justify-content: center;
+}
+
+.modo-facil,
+.modo-medio,
+.modo-dificil {
+  flex: 1;
+  margin: 0 90px;
   
+}
+
+/*Alinhar o escolha a dificuldade */
+.escolha-dificuldade {
+  text-align: center;
+}
+
+/*Alinhar o jogo*/
+.jogo {
+  text-align: center;
+}  
