@@ -1,6 +1,6 @@
 const readline = require('readline-sync');
 continuar = 0
-
+// Função para selecionar a dificuldade (no vs)
 function dificuldade() {
     var resposta = readline.question("\nDigite o nivel de dificuldade: [facil] [medio] [dificil]: ");
 
@@ -16,6 +16,8 @@ function dificuldade() {
     }
 }
 
+
+// Loop do jogo
 do {
     let pontuacao = 100;
 
@@ -116,6 +118,7 @@ do {
 
     }
 
-    continuar = readline.question("Deseja continuar ?")
+    continuar = readline.question("Deseja continuar ? Se quiser digite 'sim' ")
 
 } while (continuar.toLowerCase() == "sim")
+
