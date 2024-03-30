@@ -1,127 +1,74 @@
 const readline = require('readline-sync');
 continuar = 0
+
 // Função para selecionar a dificuldade (no vs)
 function dificuldade() {
     var resposta = readline.question("\nDigite o nivel de dificuldade: [facil] [medio] [dificil]: ");
-
+    var num_colocar;
     if (resposta === 'facil') {
-        return 15;
+        return num_colocar = 20;
     } else if (resposta === 'medio') {
-        return 20;
+        return num_colocar = 50;
     } else if (resposta === 'dificil') {
-        return 30;
+        return num_colocar = 200;
     } else {
         console.log("Essa dificuldade nao existe");
         return null;
     }
 }
 
+//Função do jogo
+function game(num_colocar) {
+    console.log("O numero está entre 1 e " + num_colocar + "\n Voce tem 6 tentativas");
+    var numaleatorio = Math.floor(Math.random() * num_colocar) + 1;
+    var tentativas = 0;
+    var num;
+    let pontuacao = 100;
+
+    for (tentativas = 1; tentativas <= 6; tentativas++) {
+        num = readline.question("Tentativa " + tentativas + ": Escolha um numero: ");
+        if (parseInt(num) === numaleatorio) {
+            console.log("Acertou o numero!");
+            break;
+        } else if (parseInt(num) < numaleatorio) {
+            console.log("O numero e maior.");
+        } else {
+            console.log("O numero e menor.");
+        }
+        pontuacao -= 10
+    }
+
+    if (tentativas > 6) {
+        console.log("Voce excedeu o numero de tentativas. O numero era " + numaleatorio + ".");
+        console.log("\nO número era " + numaleatorio);
+        pontuacao = 0;
+    } else {
+        console.log("Voce tentou: " + tentativas + " vezes.");
+
+    }
+    console.log("A sua pontuacao foi " + pontuacao)
+}
 
 // Loop do jogo
 do {
-    let pontuacao = 100;
-
     console.log("Bem-vindo ao jogo");
     console.log("\nRegras: \n\nVocê deve escolher o nivel de dificuldade; \n\nLogo apos, um número aleatorio sera gerado;\n\nAs tentativas serao limitadas;\n\nVoce comeca com 100 pontos, a cada tentativa errada perde 10.")
-
     var respostaUsuario = dificuldade();
-
     switch (respostaUsuario) {
-        //Modo fcil
-        case 15:
-            console.log("O numero está entre 1 e 20\n Voce tem 6 tentativas");
-            var numaleatorio = Math.floor(Math.random() * 20) + 1;
-            var tentativas = 0;
-            var num;
-
-            for (tentativas = 1; tentativas <= 6; tentativas++) {
-                num = readline.question("Tentativa " + tentativas + ": Escolha um numero: ");
-
-                if (parseInt(num) === numaleatorio) {
-                    console.log("Acertou o numero!");
-                    break;
-                } else if (parseInt(num) < numaleatorio) {
-                    console.log("O numero e maior.");
-                } else {
-                    console.log("O numero e menor.");
-                }
-                pontuacao -= 10
-            }
-
-            if (tentativas > 6) {
-                console.log("Voce excedeu o numero de tentativas. O numero era " + numaleatorio + ".");
-                pontuacao = 0;
-            } else {
-                console.log("Voce tentou: " + tentativas + " vezes.");
-            }
-            console.log("A sua pontuacao foi " + pontuacao)
-            break;
-
+        //Modo facil
         case 20:
-            //Modo medio
-            console.log("O numero esta entre 1 e 50 \nVoce tem 6 tentativas");
-            var numaleatorio = Math.floor(Math.random() * 50) + 1;
-            var tentativas = 0;
-            var num;
-
-            for (tentativas = 1; tentativas <= 6; tentativas++) {
-                num = readline.question("Tentativa " + tentativas + ": Escolha um numero: ");
-
-                if (parseInt(num) === numaleatorio) {
-                    console.log("Acertou o numero!");
-                    break;
-                } else if (parseInt(num) < numaleatorio) {
-                    console.log("O numero e maior.");
-                } else {
-                    console.log("O número é menor.");
-                }
-                pontuacao -= 10
-            }
-
-            if (tentativas > 5) {
-                console.log("Você excedeu o número de tentativas. O numero era " + numaleatorio + ".");
-                pontuacao = 0
-            } else {
-                console.log("Voce tentou: " + tentativas + " vezes.");
-            }
-            console.log("A sua pontuacao foi " + pontuacao)
+            console.log(game(20))
             break;
-
-        case 30:
+        case 50:
+            //Modo medio
+            console.log(game(50))
+            break;
+        case 200:
             //Modo dificil
-            console.log("O numero está entre 1 e 200\nVoce tem 5 tentativas");
-            var numaleatorio = Math.floor(Math.random() * 200) + 1;
-            var tentativas = 0;
-            var num;
-
-            for (tentativas = 1; tentativas <= 5; tentativas++) {
-                num = readline.question("Tentativa " + tentativas + ": Escolha um numero: ");
-
-                if (parseInt(num) === numaleatorio) {
-                    console.log("Acertou o numero!");
-                    break;
-                } else if (parseInt(num) < numaleatorio) {
-                    console.log("O numero e maior.");
-                } else {
-                    console.log("O numero e menor.");
-                }
-                pontuacao -= 10
-            }
-
-            if (tentativas > 5) {
-                console.log("Voce excedeu o numero de tentativas. O numero era " + numaleatorio + ".");
-                pontuacao = 0
-            } else {
-                console.log("Voce tentou: " + tentativas + " vezes.");
-            }
-            console.log("A sua pontuacao foi " + pontuacao)
+            console.log(game(200))
             break;
         default:
             break;
-
     }
-
     continuar = readline.question("Deseja continuar ? Se quiser digite 'sim' ")
-
 } while (continuar.toLowerCase() == "sim")
-
