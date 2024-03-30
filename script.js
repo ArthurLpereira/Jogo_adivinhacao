@@ -27,6 +27,7 @@ do {
     var respostaUsuario = dificuldade();
 
     switch (respostaUsuario) {
+        //Modo fcil
         case 15:
             console.log("O numero está entre 1 e 20\n Voce tem 6 tentativas");
             var numaleatorio = Math.floor(Math.random() * 20) + 1;
@@ -57,6 +58,7 @@ do {
             break;
 
         case 20:
+            //Modo medio
             console.log("O numero esta entre 1 e 50 \nVoce tem 6 tentativas");
             var numaleatorio = Math.floor(Math.random() * 50) + 1;
             var tentativas = 0;
@@ -86,6 +88,7 @@ do {
             break;
 
         case 30:
+            //Modo dificil
             console.log("O numero está entre 1 e 200\nVoce tem 5 tentativas");
             var numaleatorio = Math.floor(Math.random() * 200) + 1;
             var tentativas = 0;
