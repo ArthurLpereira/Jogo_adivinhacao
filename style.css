@@ -1,42 +1,69 @@
-/*  muda cor do fundo */
+/* Muda cor do fundo*/
 body {
-  background-color: rgb(141, 138, 138); 
+  background-color:  #F5F5DC;
 }
 
-/*alinha o titulo no centro */
+/* Centraliza o título */
 .titulo {
   text-align: center;
   font-family: Arial;
 }
 
-/*alinha o sobre o jogo no centro */
+/* Centraliza o "Sobre o jogo" */
 .sobre_jogo {
-  width: 450px; 
+  width: 450px;
+  margin: auto; /* Centraliza horizontalmente */
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: Arial;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color:  #D2B48C;
+  padding: 10px; /* Aumenta o padding */
 }
 
-/* alinha os niveis de dificuldade na horizontal e de forma uniforme */
+/* Centraliza os níveis de dificuldade */
 .dificuldade {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  font-family: Arial;
 }
 
+/* Estiliza os modos de dificuldade */
 .modo-facil,
 .modo-medio,
 .modo-dificil {
   flex: 1;
-  margin: 0 90px;
-  
+  margin: 20px 20px; 
+  font-family: Arial;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color:  #D2B48C;
+  padding: 10px; 
 }
 
-/*Alinhar o escolha a dificuldade */
+/* Centraliza "Escolha a dificuldade" */
 .escolha-dificuldade {
   text-align: center;
-}
+  font-family: Arial;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color:  #D2B48C;
+  padding: 10px;
+  display:inline-block;
+  margin: 0px 550px;
+  }
 
-/*Alinhar o jogo*/
+
+/* Centraliza o "Jogo" */
 .jogo {
   text-align: center;
-}  
+  font-family: Arial;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color:  #D2B48C;
+  padding: 30px;
+  display: inline-block;
+  margin: 20px 500px;
+}
+
+ 
