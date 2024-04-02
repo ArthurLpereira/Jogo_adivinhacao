@@ -1,69 +1,74 @@
 /* Muda cor do fundo*/
 body {
-  background-color:  #F5F5DC;
+    background-color:  #b5b5b5;
+  }
+  
+  /* Centraliza o título */
+  .titulo {
+    text-align: center;
+    font-family: Arial;
+  }
+  
+  /* Centraliza o "Sobre o jogo" */
+  .sobre_jogo {
+    width: 450px;
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center;
+    font-family: Arial;
+    border: 1px solid rgb(51, 255, 0);
+    border-radius: 10px;
+    background-color:  #8d8d8d;
+    padding: 10px; /* Aumenta o padding */
+    border-width: 3px;  /*Aumenta o tamanho da borda*/
 }
-
-/* Centraliza o título */
-.titulo {
-  text-align: center;
-  font-family: Arial;
-}
-
-/* Centraliza o "Sobre o jogo" */
-.sobre_jogo {
-  width: 450px;
-  margin: auto; /* Centraliza horizontalmente */
-  text-align: center;
-  font-family: Arial;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color:  #D2B48C;
-  padding: 10px; /* Aumenta o padding */
-}
-
-/* Centraliza os níveis de dificuldade */
-.dificuldade {
-  display: flex;
-  justify-content: center;
-  font-family: Arial;
-}
-
-/* Estiliza os modos de dificuldade */
-.modo-facil,
-.modo-medio,
-.modo-dificil {
-  flex: 1;
-  margin: 20px 20px; 
-  font-family: Arial;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color:  #D2B48C;
-  padding: 10px; 
-}
-
-/* Centraliza "Escolha a dificuldade" */
-.escolha-dificuldade {
-  text-align: center;
-  font-family: Arial;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color:  #D2B48C;
-  padding: 10px;
-  display:inline-block;
-  margin: 0px 550px;
+  
+  /* Centraliza os níveis de dificuldade */
+  .dificuldade {
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+    
+  }
+  
+  /* Estiliza os modos de dificuldade */
+  .modo-facil,
+  .modo-medio,
+  .modo-dificil {
+    flex: 1;
+    margin: 20px 20px; 
+    font-family: Arial;
+    border: 1px solid rgb(51, 255, 0);
+    border-radius: 10px;
+    background-color:  #8d8d8d;
+    padding: 10px; 
+    border-width: 3px; 
+  }
+  
+  /* Centraliza "Escolha a dificuldade" */
+  .escolha-dificuldade {
+    width: 450px;
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center;
+    font-family: Arial;
+    border: 1px solid rgb(51, 255, 0);
+    border-radius: 10px;
+    background-color:  #8d8d8d;
+    padding: 10px; /* Aumenta o padding */
+    margin-bottom: 20px;
+    border-width: 3px;  /*Aumenta o tamanho da borda*/
+  }
+  
+  
+  /* Centraliza o "Jogo" */
+  .jogo{
+    width: 450px;
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center;
+    font-family: Arial;
+    border: 1px solid rgb(51, 255, 0);
+    border-radius: 10px;
+    background-color:  #8d8d8d;
+    padding: 10px; /* Aumenta o padding */
+    border-width: 3px; /*Aumenta o tamanho da borda*/
   }
 
-
-/* Centraliza o "Jogo" */
-.jogo {
-  text-align: center;
-  font-family: Arial;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color:  #D2B48C;
-  padding: 30px;
-  display: inline-block;
-  margin: 20px 500px;
-}
-
- 
