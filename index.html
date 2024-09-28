@@ -3,57 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo de adivinhação</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Escolha a dificuldade</title>
 </head>
 <body>
-  <div class="titulo"> <h1>Jogo de adivinhação</h1> </div>
-<!-- Criando o sobre o jogo -->
-  <div class="sobre_jogo">
-  <h2>Sobre o jogo</h2>
-  <p>Neste jogo, você terá a oportunidade de escolher o nível de dificuldade, o que alterará o intervalo de números válidos, além do número de tentativas disponíveis. Divirta-se e mostre o quão habilidoso você pode ser! </p>
-</div>
-<!-- Criando as dificuldades -->
-<div class="dificuldade">
-  <!-- Modo facil -->
-  <div class="modo-facil">
-  <h1>Modo fácil 👶🏻</h1>
-  <p>O número está entre 1 e 20</p>
-  <p>O usuário terá 6 chances </p>
-  <p>Será dito se o numero escolhido e mais baixo ou alto do que o sorteado</p>
-  </div>
-<!-- Modo medio -->
-  <div class="modo-medio">
-    <h1>Modo médio 🙄</h1>
-    <p>O número está entre 1 e 50</p>
-    <p>O usuário terá 6 chances </p>
-    <p>Será dito se o numero escolhido e mais baixo ou alto do que o sorteado</p>
-  </div>
-<!-- modo dificil -->
-  <div class="modo-dificil">
-    <h1>Modo dificil 😡 </h1>
-    <p>O número está entre 1 e 200</p>
-    <p>O usuário terá 5 chances </p>
-    <p>Será dito se o numero escolhido e mais baixo ou alto do que o sorteado</p>
-  </div>
-</div>
-<!-- Criando o escolha a dificuldade -->
-<div class="escolha-dificuldade">
-  <h2>Escolha a dificuldade</h2>
-<select id="opcoes-dificuldade">
-  <option value="1"> Fácil</option>
-  <option value="2"> Média</option>
-  <option value="3"> Difícil</option>
-</select>
-<button onclick="confirmar_dificuldade()">Confirmar</button>
-</div>
- <!-- Criando o Escolha um número -->
-<div class="jogo">
-<h2>Você escolheu a dificuldade ...</h2>
-<p>O número está entre 1 e ...</p>
-<label for="numero">Escolha o número</label>
-<input type="number" id="numero" name="numero" min="1" max="200">
-<button onclick="confirmar_numero()">Confirmar</button>
-</div>
+  <header>
+      <div id="bemvindo">
+        <h1>bem-vindo ao jogo da adivinhação</h1>
+      </div>
+  </header>
+  <main>
+    <section id="agrupa_cards">
+      <div class="card_gira">
+        <div class="cards" id="card_verde"><p>Fácil</p></div>
+        <div class="back"><p>Este é o modo mais fácil. Os números variam de 1 a 20, e você tem 6 tentativas para acertar!
+        </p></div>
+      </div>
+
+      <div class="card_gira">
+        <div class="cards" id="card_amarelo"><p>Médio</p></div>
+        <div class="back"><p>Um desafio intermediário! Os números vão de 1 a 50, e você também tem 6 tentativas para descobrir o número.</p></div>
+    </div>
+    
+    <div class="card_gira">
+      <div class="cards" id="card_vermelho"><p>Difícil</p></div>
+      <div class="back"><p>O modo mais desafiador! Aqui, os números vão de 1 a 200, e você só terá 5 tentativas para acertar.
+      </p></div>
+    </div>
+      
+    </section>
+
+    <div id="dificuldade">
+      <select name="escolher_dificuldade" id="escolher_dificuldade">
+        <option value="">Escolha uma dificuldade</option>
+        <option value="facil">Fácil</option>
+        <option value="medio">Médio</option>
+        <option value="dificil">Difícil</option>
+      </select>
+
+      <button id="confirmar_dificuldade">Confirmar</button>
+      <a href="./adivinhe.html">.....</a>
+    </div>
+  </main>
 </body>
 </html>
