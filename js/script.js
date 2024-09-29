@@ -14,5 +14,6 @@ button.addEventListener("click", () =>{
         return;
     }
     console.log(num_colocar)
+    window.location.href = "./adivinhe.html";
 })
 
