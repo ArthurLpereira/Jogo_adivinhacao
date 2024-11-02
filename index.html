@@ -9,29 +9,25 @@
 <body>
   <header>
       <div id="bemvindo">
-        <h1>bem-vindo ao jogo da adivinhação</h1>
+        <h1>Bem-vindo ao jogo da adivinhação</h1>
       </div>
   </header>
   <main>
     <section id="agrupa_cards">
       <div class="card_gira">
-        <!-- Se colocar espaço na classe são duas diferentes -->
         <div class="cards card_verde"><p>Fácil</p></div>
-        <div class="back card_verde"><p>Este é o modo mais fácil. Os números variam de 1 a 20, e você tem 6 tentativas para acertar!
-        </p></div>
+        <div class="back card_verde"><p>Este é o modo mais fácil. Os números variam de 1 a 20, e você tem 6 tentativas para acertar!</p></div>
       </div>
 
       <div class="card_gira">
         <div class="cards card_amarelo"><p>Médio</p></div>
-        <div class="back card_amarelo"><p>Um desafio intermediário! Os números vão de 1 a 50, e você também tem 6 tentativas para descobrir o número.</p></div>
-    </div>
-    
-    <div class="card_gira">
-      <div class="cards card_vermelho"><p>Difícil</p></div>
-      <div class="back card_vermelho"><p>O modo mais desafiador! Aqui, os números vão de 1 a 200, e você só terá 5 tentativas para acertar.
-      </p></div>
-    </div>
+        <div class="back card_amarelo"><p>Um desafio intermediário! Os números vão de 1 a 50, e você tem 5 tentativas para descobrir o número.</p></div>
+      </div>
       
+      <div class="card_gira">
+        <div class="cards card_vermelho"><p>Difícil</p></div>
+        <div class="back card_vermelho"><p>O modo mais desafiador! Aqui, os números vão de 1 a 200, e você só terá 5 tentativas para acertar.</p></div>
+      </div>
     </section>
 
     <div id="dificuldade">
@@ -44,7 +40,37 @@
 
       <button id="confirmar_dificuldade">Confirmar</button>
     </div>
+
+    <!-- Área do jogo -->
+    <div id="gameArea" style="display:none;">
+      <!-- Botão de Recomeçar -->
+      <div id="reiniciar-container" style="display:none;">
+        <button id="reiniciar_jogo">Recomeçar</button>
+      </div>
+
+      <div id="misterio">
+        <hr>
+        <input type="text" id="guessDisplay" value="?" readonly>
+        <hr>
+      </div>
+
+      <div id="feedbacks">
+        <p id="feedback"></p>
+        <p id="score">Pontuação: 100</p>
+        <p id="attemptsInfo"></p>
+      </div>
+      
+      <div id="adivinhe">
+        <button id="buttonMais">+</button>
+        <input type="number" name="colocar_num" id="colocar_num" min="1">
+        <button id="buttonMenos">-</button>
+      </div>
+
+      <div id="confirmar-num">
+        <button id="confirmar_palpite">Confirmar palpite</button>
+      </div>
+    </div>
   </main>
   <script src="./js/script.js"></script>
 </body>
-</html> 
+</html>
